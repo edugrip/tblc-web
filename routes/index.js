@@ -17,11 +17,7 @@ router.get('/features', function(req, res, next) {
 router.get('/', function(req, res, next) {
   res.render('site/index');
 });
-<<<<<<< HEAD
-router.get('/test', function(req, res, next) {
-  res.render('site/soon');
-});
-=======
+
 router.get('/TBLC.pdf', function(req, res, next) {
   res.render('site/TBLC.pdf');
 });
@@ -32,5 +28,4 @@ router.get('/test', function(req, res, next) {
   res.render('site/soon');
 });
 
->>>>>>> deccafe (design)
 module.exports = router;
