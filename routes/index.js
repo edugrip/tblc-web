@@ -18,8 +18,8 @@ router.get('/', function(req, res, next) {
   res.render('site/index');
 });
 
-router.get('/TBLC.pdf', function(req, res, next) {
-  res.render('site/TBLC.pdf');
+router.get('/TBLC Whitepaper.pdf', function(req, res, next) {
+  res.render('site/TBLC Whitepaper.pdf');
 });
 router.get('/login', function(req, res, next) {
   res.render('site/login');
