@@ -14,12 +14,8 @@ router.get('/about', function(req, res, next) {
 router.get('/features', function(req, res, next) {
   res.render('site/features');
 });
-router.get('/', function(req, res, next) {
-  res.render('site/index');
-});
-
-router.get('/TBLC Whitepaper.pdf', function(req, res, next) {
-  res.render('site/TBLC Whitepaper.pdf');
+router.get('./whitepaper.pdf', function(req, res, next) {
+  res.render('site/whitepaper.pdf');
 });
 router.get('/login', function(req, res, next) {
   res.render('site/login');
