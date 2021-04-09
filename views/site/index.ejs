@@ -1,212 +1,577 @@
 <%- include('header'); -%>
-<style>
-    .f-size-50{
-        font-size: 54px;
-        margin-top: 20px;
-    }
-</style>
-<div class="main-content-wrapper">
-    <section data-settings="particles-1" class="main-section crumina-flying-balls particles-js bg-1 medium-padding120 responsive-align-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-                    <img class="responsive-width-50" src="asstes/img/main.png" alt="image">
-                </div>
-                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
-                    <header class="crumina-module  heading--h1 heading--with-decoration pt100">
+    <style>
+        .f-size-50 {
+            font-size: 54px;
+            margin-top: 20px;
+        }
+
+        .info-box--style2 {
+            text-align: left;
+            padding-left: 40px;
+            background: #000;
+            text-align: center;
+            padding: 0px 11px;
+            border: 2px solid #ffba00;
+            height: 235px;
+        }
+
+        .info-box--style4 {
+            border: 4px solid transparent;
+            border-radius: 20px;
+            padding: 25px;
+            height: 276px !important;
+            background-color: #2a2e37;
+        }
+
+        .icon-demonstration {
+
+            background-color: rgb(56 53 45 / 0%);
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+
+        }
+
+        img.vert-move {
+            -webkit-animation: mover 1s infinite alternate;
+            animation: mover 1s infinite alternate;
+        }
+
+        img.vert-move {
+            -webkit-animation: mover 1s infinite alternate;
+            animation: mover 1s infinite alternate;
+        }
+
+        @-webkit-keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        @keyframes mover {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .text-left {
+            text-align: left !important;
+        }
+
+        .pt40 {
+            margin-top: 50px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .info-box--style2 {
 
 
-                        <h1 class="heading-title f-size-50 weight-normal no-margin">First token on Binance Smart Chain that
-                            <span class="weight-bold">Simulates a </span></h1>
-                        <h6 class="c-primary">decentralized exchange</h6>
-                    </header>
-                    <a data-scroll href="#details" class="btn btn--large btn--transparent btn--secondary">Details</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section class="medium-padding120 responsive-align-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                    <header class="crumina-module crumina-heading heading--h2 heading--with-decoration pt80">
-                        <div class="heading-sup-title">About TBLC Coin</div>
+                padding: 25px 11px;
+            }
 
-                        <div class="heading-text">Price of TBLC grows with a certain mathematical computation algorithm which is fully decentralized and is integrated on the blockchain. Once deployed on the blockchain the pricing mechanism is controlled automatically by the BNB virtual Machine
-                        </div>
-                    </header>
-                    <p>Users can buy and sell their TBLC on the tblcexchange.com a system designed to expedite and simplify the process of trading TBLC digital assets.
-                    </p>
+            .login-form {
+                padding: 52px 10px;
+                border-radius: 20px;
+                text-align: center;
+            }
 
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mt30">
-                    <img class="responsive-width-50" src="asstes/img/phone.png" alt="phone">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="bg-dotted-map">
-        <div class="container">
-            <div class="row  align-center mb30">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <img class="primary-dots mb30" src="asstes/img/dots.png" alt="dots">
-                    <header class="crumina-module crumina-heading heading--h2 heading--with-decoration">
-                        <h2 class="heading-title weight-normal">Key features of TBLC</h2>
-                        <div class="heading-text">Fully decentralized asset on top of BNB blockchain</div>
-                    </header>
-                </div>
-            </div>
-        </div>
-    </section>
-<section>
-        <div class="container">
-            <div class="row medium-padding80">
-                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                    <div class="crumina-module crumina-info-box info-box--style2">
-                        <!-- <div class="info-box-thumb">
-                            <svg class="woox-icon" data-name="Layer 1" viewBox="0 0 26.97 35.33">
-                            <path d="M14.05 35.33l-3.92-.98 1.2-4.84-1.38-.35L8.75 34l-3.93-.97 1.22-4.92-5.47-1.38L0 26.6l1.87-4.32.42.1c.64.18 1.35.36 1.75.46l.38.08a.99.99 0 0 0 .23.03c.1 0 .37 0 .54-.43L8.5 9.27c.03-.55-.29-.93-1-1.1l-.34-.1-1.8-.44-.5-.11 1.02-4.14.49.12 5.47 1.36L13.05 0l3.92.98-1.19 4.75c.47.1.94.21 1.4.33l1.18-4.73 3.93.98-1.22 4.9c2.93 1.06 6.45 2.97 5.82 7.19a5.24 5.24 0 0 1-3.07 4.4c2.45 1.67 3.1 4.03 1.99 7.2-1.13 3.24-3.37 4.75-7.04 4.75a20.42 20.42 0 0 1-3.49-.35zm-2.7-1.7l1.98.49 1.21-4.88.47.1a20.58 20.58 0 0 0 3.77.4c3.22 0 5.1-1.25 6.09-4.07 1.08-3.09.31-5.1-2.48-6.56l-1.2-.63 1.32-.3a4.22 4.22 0 0 0 3.4-3.93c.42-2.85-1.3-4.77-5.6-6.25l-.43-.15 1.2-4.82-1.99-.49-1.18 4.73-.48-.12c-.77-.2-1.57-.38-2.36-.56l-.5-.11 1.2-4.77-2-.5-1.2 4.85-.48-.11-5.48-1.36-.54 2.18c.9.2 1.4.32 1.66.42a2.08 2.08 0 0 1 1.75 2.23l-3.33 13.4a1.57 1.57 0 0 1-1.9 1.08c-.12-.01-.46-.08-1.8-.44L1.38 25.9l5.38 1.36.48.13-1.22 4.9 1.98.5 1.22-4.87.49.13c.8.22 1.58.42 2.35.61l.48.13zM16 26.45a20.76 20.76 0 0 1-5.02-.85l-1.05-.27 1.87-7.47.48.12.72.16c2.06.46 5.51 1.24 6.77 3.28a3.13 3.13 0 0 1 .35 2.48c-.29 1.17-1.24 2.55-4.12 2.55zm-4.86-1.84l.1.02a19.97 19.97 0 0 0 4.76.82c1.82 0 2.85-.58 3.15-1.79a2.13 2.13 0 0 0-.23-1.72c-1.04-1.68-4.36-2.42-6.14-2.82l-.25-.06zm6.18-7.82a16.35 16.35 0 0 1-4.06-.7l-.96-.24L14 8.98l.5.13.6.13c1.68.38 4.51 1 5.6 2.77a2.99 2.99 0 0 1 .33 2.38c-.27 1.1-1.14 2.4-3.7 2.4zm-3.81-1.66h.01a15.57 15.57 0 0 0 3.8.65c2.09 0 2.57-.94 2.74-1.65a2 2 0 0 0-.2-1.6c-.87-1.4-3.54-2-4.98-2.32l-.14-.03z" data-name="Bitcoin BTC"></path>
-                            </svg>
-                        </div> -->
-                        <div class="info-box-content">
-                            <h5 class="info-box-title">Fully decentralized asset on top of BNB  blockchain</h5>
-                            <p class="info-box-text">TBLC is proud to announce the platform as the first crypto asset that is deployed on BNB  blockchain that simulates decentralized exchange.
+            .mer_b {
+                margin-bottom: 31px;
+            }
 
-</p>
-                        </div>
+        }
+
+        .login-form {
+            padding: 52px 120px;
+            border-radius: 20px;
+            text-align: center;
+        }
+    </style>
+    <div class="main-content-wrapper">
+        <section data-settings="particles-1"
+            class="main-section crumina-flying-balls particles-js responsive-align-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                        <img class="responsive-width-100 vert-move" src="asstes/img/main.png" alt="image">
+                    </div>
+                    <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                        <header class="crumina-module  heading--h1 heading--with-decoration pt80">
+
+
+                            <h1 class="heading-title f-size-50 weight-normal no-margin">Powering Data for the new
+                                <span class="weight-bold">Equity blockchain</span>
+                            </h1>
+                            <h6 class="c-primary">Global decentralize network and gaming platform</h6>
+                        </header>
+                        <br />
+                        <a data-scroll href="#details" class="btn btn--large btn--primary">Details</a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb30">
-                    <div class="crumina-module crumina-info-box info-box--style2">
-                        <!-- <div class="info-box-thumb">
-                            <svg class="woox-icon" data-name="Layer 1" viewBox="0 0 22.62 36.84">
-                            <g data-name="Ethereum ETH">
-                            <path d="M32 15.52L41.93 32 32 37.86 22.07 32 32 15.52zm0-1.94L20.69 32.34 32 39.02l11.3-6.68L32 13.58z" class="cls-1" transform="translate(-20.69 -13.58)"></path>
-                            <path d="M32 28.67l9.09 3.82L32 37.86l-9.09-5.37L32 28.67zm0-1.09l-11.31 4.76L32 39.02l11.3-6.68L32 27.58z" class="cls-1" transform="translate(-20.69 -13.58)"></path>
-                            <path d="M39.78 37.73L32 48.7l-7.78-10.96 7.27 4.3.5.3.52-.3 7.27-4.3zm3.53-3.24L32 41.16 20.7 34.5 32 50.41l11.31-15.94z" class="cls-1" transform="translate(-20.69 -13.58)"></path>
-                            <path d="M10.81 1.88h1v22.79h-1zM10.81 27.75h1v7.87h-1z" class="cls-1"></path>
-                            </g>
-                            </svg>
-                        </div> -->
-                        <div class="info-box-content">
-                            <h5 class="info-box-title">Buy and sell TBLC immediately with BNB </h5>
-                            <p class="info-box-text">World's first Asset that can be traded with BNB  immediately.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb30">
-                    <div class="crumina-module crumina-info-box info-box--style2">
-                        <!-- <div class="info-box-thumb">
-                            <svg class="woox-icon" data-name="Layer 1" viewBox="0 0 32.69 20">
-                            <g data-name="Dash DASH">
-                            <path d="M38.42 42H16.27l1.84-6h19.37l2.72-8H20.86l1.84-6h21.73a4.34 4.34 0 0 1 1.87.53 2.84 2.84 0 0 1 1.4 1.38 3.9 3.9 0 0 1 .52 1.73 3.73 3.73 0 0 1-.28 2.1l-2.82 8.87a10.88 10.88 0 0 1-1 1.9 9.85 9.85 0 0 1-1.64 1.69 13.19 13.19 0 0 1-1.94 1.27l-.2.08a5.6 5.6 0 0 1-1.92.45zm-20.8-1h20.8a4.78 4.78 0 0 0 1.57-.4l.13-.05a12.63 12.63 0 0 0 1.73-1.14 8.86 8.86 0 0 0 1.45-1.48 10.09 10.09 0 0 0 .87-1.66L47 27.4a2.92 2.92 0 0 0 .22-1.64 3.05 3.05 0 0 0-.4-1.37 1.94 1.94 0 0 0-.92-.94 3.55 3.55 0 0 0-1.47-.44h-21l-1.22 4h19.38L38.2 37H18.85z" class="cls-1" transform="translate(-15.57 -22)"></path>
-                            <path d="M28.13 35H15.57l1.83-6h12.43zm-11.21-1h10.45l1.13-4H18.16z" class="cls-1" transform="translate(-15.57 -22)"></path>
-                            </g>
-                            </svg>
-                        </div> -->
-                        <div class="info-box-content">
-                            <h5 class="info-box-title">Completely Anonymous and decentralized</h5>
-                            <p class="info-box-text">No-one even TBLC owners does not have any control over BNB .</p>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <hr>
-        </div>
-    </section>
-    <section class="medium-padding120 responsive-align-center">
-        <div class="container">
-            <div class="row bg-2">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb30">
-                    <header class="crumina-module crumina-heading heading--h2 heading--with-decoration">
-                        <img class="primary-dots mb30" src="asstes/img/dots.png" alt="dots">
-                        <h2 class="heading-title weight-normal">How TBLC revolutionize the BNB  platforms.
-                        </h2>
-                        <p>TBLC opens up a new horizon for BNB  users to work and deploy decentralized applications on the top of BNB  blockchain.</p>
+        </section>
 
-                    </header>
-                    <div class="heading-text f-size-20">Inbuilt pricing mechanism to control pricing.</div>
-                    <p>The automated pricing algorithm of the open-source TBLC token will help asset owners to earn profit by publicizing the platform. The price increases as the demand of tokens increase.</p>
-                    <hr>
-                    <div class="heading-text f-size-20">Be Safe and Secure!.</div>
-                    <p>All these benefits come with no compromise on security. we deploy proven security standards matching the popular blockchain systems.</p>
-                    <hr>
-                    <div class="heading-text f-size-20">Completely decentralized</div>
-                    <p>TBLC source code is completely decentralized. Controlled by no-one, the BNB  virtual machine is the proof of the algorithms that run behind.</p>
-
-                    <hr>
-                    <div class="heading-text f-size-20">Open source code base.</div>
-                    <p>All source code of TBLC crypto platform is completely public on BNB  blockchain. Anyone can see and verify what the platform claims to be. This is how the trustless nature of TBLC is creating trust!</p>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-</div>
+        <section class="">
+            <div class="container">
+                <div class="row pb60">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <article class="hentry post post-standard has-post-thumbnail video">
+                            <div class="row">
 
 
-<section class="">
-    <div class="container">
-        <div class="row pb60">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <article class="hentry post post-standard has-post-thumbnail video">
+                                <div class="col-lg-7">
+                                    <div class="post__content">
+                                        <a href="#" class="h3 post__title entry-title">HOW DOES DEFIPOWER SMART CHAIN
+                                            WORKS?</a>
+                                        <p>Defipower Smart Chain is stay on mainnet, activating the parallel blockchain
+                                            to Binance Chain that will allow the advent of clever contracts and the
+                                            staking mechanism for BNB. Any involved humans and/or groups can collect BNB
+                                            stakes to come to be a validator of this new blockchain.
+                                        </p>
+                                        <p class="heading-text ">Defipower Smart Chain is perhaps the most popular
+                                            designs in the undertaking of late and is a blockchain stage created via
+                                            Binance to expand the Defipower environment with the guide of finding
+                                            promising errands through Smart Contracts. With Binance Smart Chain's
+                                            dispatch period, DeFi business endeavor undertakings and the bigger
+                                            blockchain neighborhood can use the fabulous that Defipower Chain needs to
+                                            give, gotten with the guide of cunning agreement support, cross-chain
+                                            capacity, and additional benefits that Defipower Smart Chain brings.
+                                        </p>
+                                    </div>
+                                    <div class="btn-market-wrap ">
+                                        <a href="#" class="btn btn--market btn--apple btn--with-icon btn--icon-left">
+                                            <div class="text">
+                                                <span class="title">Whitepaper</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-5">
+                                    <div class="post-thumb">
+                                        <img src="asstes/img/post3.jpg" alt="post">
+                                        <div class="overlay overlay-blog"></div>
+                                        <a href="https://www.youtube.com/watch?v=SSo_EIwHSd4"
+                                            class="video-control video-control-youtube js-popup-iframe">
+                                            <svg class="svg-inline--fa fa-play fa-w-14 woox-icon" aria-hidden="true"
+                                                data-prefix="fas" data-icon="play" role="img"
+                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                data-fa-i2svg="">
+                                                <path fill="currentColor"
+                                                    d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z">
+                                                </path>
+                                            </svg><!-- <i class="woox-icon fas fa-play"></i> -->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+
+
+
                     <div class="row">
-                        
-                        <div class="col-lg-5">
-                            <div class="post-thumb">
-                                <img src="asstes/img/post3.jpg" alt="post">
-                                <div class="overlay overlay-blog"></div>
-                                <a href="https://www.youtube.com/watch?v=SSo_EIwHSd4" class="video-control video-control-youtube js-popup-iframe">
-                                <svg class="svg-inline--fa fa-play fa-w-14 woox-icon" aria-hidden="true" data-prefix="fas" data-icon="play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg><!-- <i class="woox-icon fas fa-play"></i> -->
-                                </a>
-                            </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <article class="hentry post post-standard">
+                                <div class="row">
+
+
+                                    <div class="col-lg-5">
+                                        <div class="post-thumb">
+                                            <img src="asstes/img/post3.png" alt="post">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-7">
+                                        <div class="post__content">
+                                            <a href="#" class="h3 post__title entry-title">We’ve built a platform
+                                                to buy and sell shares.</a>
+                                            <p>Defipower is a platform for the future of funding that powering dat for
+                                                the new equity blockchain</p>
+                                            <p class="heading-text "></p>
+                                            <p>At the end, Our aims to integrate all companies, employees, and business
+                                                assets into a unified blockchain ecosystem, which will make business
+                                                truly efficient, transparent, and reliable.</p>
+                                        </div>
+                                        <div class="btn-market-wrap ">
+                                            <a href="#"
+                                                class="btn btn--market btn--apple btn--with-icon btn--icon-left">
+
+
+                                                <div class="text">
+
+                                                    <span class="title">Join Now</span>
+                                                </div>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
                         </div>
-                        <div class="col-lg-7">
-                            <div class="post__content">
-                                <a href="#" class="h3 post__title entry-title">TBLC is the first decentralized asset on top of BNB  blockchain.</a>
-                                <p class="post__text">Price of TBLC grows with a certain mathematical computation algorithm which is fully decentralized and is integrated on the blockchain. Once deployed on the blockchain the pricing mechanism is controlled automatically by the BNB  virtual Machine</p>
-                                
+
+
+
+                    </div>
+                </div>
+        </section>
+        <section class="bg-dotted-map">
+            <div class="container">
+                <div class="row  align-center mb30">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <!-- <img class="primary-dots mb30" src="asstes/img/dots.png" alt="dots"> -->
+                        <header class="crumina-module crumina-heading heading--h2 heading--with-decoration">
+                            <h2 class="heading-title weight-normal"> Advantages of Defipower</h2>
+                            <div class="heading-text">During the Decentralized Finance revolution, as the neighborhood
+                                suggests a developing pastime in choice monetary options supplied by means of
+                                blockchain, the well timed presence of BSC has received extensive interest from the
+                                Binance Chain community. Now, DeFi initiatives and the blockchain neighborhood can take
+                                gain of the very pleasant supplied by using Binance Chain, powered via clever contracts,
+                                cross-chain interoperability, and extra thanks to the launch of BSC. The Binance Chain
+                                and Smart Chain communities welcome all builders and dApp initiatives to take a look at
+                                this step forward arena.
+                            </div>
+                        </header>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row medium-padding80">
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mer_b">
+                        <div class="crumina-module crumina-info-box info-box--style4">
+
+                            <div class="info-box-content col-12">
+                                <h5 class="info-box-title">Fully decentralized asset on top of blockchain</h5>
+                                <p class="info-box-text">A rich and growing digital asset ecosystem powered by Binance
+                                    DEX, the leading decentralized exchange
+
+                                </p>
                             </div>
                         </div>
                     </div>
-                </article>
-                
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb30">
+                        <div class="crumina-module crumina-info-box info-box--style4">
+
+                            <div class="info-box-content">
+                                <h5 class="info-box-title">Buy and sell immediately </h5>
+                                <p class="info-box-text"> High performance with a network capable of producing a block
+                                    every 3 seconds.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 mb30">
+                        <div class="crumina-module crumina-info-box info-box--style4">
+
+                            <div class="info-box-content">
+                                <h5 class="info-box-title">Completely Anonymous and decentralized</h5>
+                                <p class="info-box-text">A developing ecosystem of thousands and thousands of customers
+                                    throughout Binance.com and Binance DEX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class=" responsive-align-center">
+
+            <div class="container">
+                <header class="crumina-module crumina-heading heading--h2 heading--with-decoration align-center">
+                    <img class="primary-dots mt30" src="asstes/img/dots.png" alt="dots">
+                    <h2 class="heading-title weight-normal">Features of Defipower Smart Chain
+                    </h2>
+                    <p>TBLC opens up a new horizon for BNB users to work and deploy decentralized applications on the
+                        top of BNB blockchain.</p>
+
+                </header>
+                <div class="nk-block nk-block-features mgb-m30">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="feature animated fadeInUp" data-animate="fadeInUp" data-delay=".7" style="visibility: visible; animation-delay: 0.7s;">
+                        <div class="feature-icon dot">
+                            <em class="icon ikon ikon-paricle-alt"></em>
+                        </div>
+                        <div class="feature-text">
+                            <h5 class="title title-sm">Performance</h5>
+                            <p>High-Performance Business Platform Create / Unlock Wallet
+                                Lower Transaction Fees with High-Performance Business Platform</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature animated fadeInUp" data-animate="fadeInUp" data-delay=".8" style="visibility: visible; animation-delay: 0.8s;">
+                        <div class="feature-icon dot">
+                            <em class="icon ikon ikon-donught"></em>
+                        </div>
+                        <div class="feature-text">
+                            <h5 class="title title-sm">Transactions</h5>
+                            <p>
+                                we do Accelerated Transactions with trustworthiness and Cross-Chain Asset Transfer with high transparency and imutaility</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature animated fadeInUp" data-animate="fadeInUp" data-delay=".9" style="visibility: visible; animation-delay: 0.9s;">
+                        <div class="feature-icon dot">
+                            <em class="icon ikon ikon-document"></em>
+                        </div>
+                        <div class="feature-text">
+                            <h5 class="title title-sm">Token</h5>
+                            <p>
+                                BNB Staking Compatibility With (EVM) Ethereum Virtual Machine and also provide BNB stacking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        </div>
-   
+
+            </div>
+
+            <!-- <div class="main-content-wrapper">
+                <section>
+                      <div class="container">
+                         <div class="row">
+                              <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                  <ul class="list list--primary">
+                                      <li>
+                                          <svg class="woox-icon icon-check-mark-2">
+                                              <use xlink:href="#icon-check-mark-2"></use>
+                                          </svg>
+                                          <a href="#"><strong>Investigationes lectores legere</strong></a>
+                                      </li>
+                                      <li>
+                                          <svg class="woox-icon icon-check-mark-2">
+                                              <use xlink:href="#icon-check-mark-2"></use>
+                                          </svg>
+                                          <a href="#"><strong>Claritas est etiam processus dynamicus</strong></a>
+                                      </li>
+                                      <li>
+                                          <svg class="woox-icon icon-check-mark-2">
+                                              <use xlink:href="#icon-check-mark-2"></use>
+                                          </svg>
+                                          <a href="#"><strong>Quam nunc putamus parum claram</strong></a>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                  
+                              </div>
+                              
+                          </div>
+                      </div>
+                  </section>
+              </div> -->
+
+
+            
     </div>
-</section>
-<section class="medium">
+    </section>
+
+
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-                <header class="crumina-module crumina-heading heading--h3 heading--with-decoration">
-                    <h3 class="heading-title">Read the White paper</h3>
-                    <div class="heading-text"> Download TBLC whitepaper to read in detail about the TBLC coin, its use cases and how it transforms the BNB  eco-system by opening up new horizons for BNB  users by deploying a smart contract on top of BNB  blockchain.
 
+            <header class="crumina-module crumina-heading heading--h2 heading--with-decoration align-center">
+                <img class="primary-dots mt30" src="asstes/img/dots.png" alt="dots">
+                <h2 class="heading-title weight-normal">Roadmap of Defipower</h2>
+
+            </header>
+         </div>
+         </div>
+
+
+                <!-- partial -->
+
+                <div class="road-map">
+                    <div class="road-map-content">
+                        <div class="timeline timeline--horizontal timeline--loaded" style="opacity: 1;">
+                            <div class="timeline__wrap cont container">
+                                <div class="timeline__items"
+                                    style="width:1920px; height:383px; transform: translate3d(-625px, 0px, 0px); overflow-x:auto;" id="style-4">
+                                    <div class="timeline__item timeline__item--top"
+                                        style="width: 312.25px; height: 163px;">
+                                        <div class="timeline__item__inner">
+                                            <div class="timeline__content__wrap">
+                                                <div class="timeline__content">
+                                                    <h6>17  Dec, 2020</h6>
+                                                    <h4>Development of DeFi Platform for Defipower</h4>
+                                                    <p>TBLC is going to bring a new DeFi system where users will be able
+                                                        to lend their crypto assets and earn reward on it.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline__item timeline__item--bottom"
+                                        style="width: 312.25px; height: 163px; transform: translateY(163px);">
+                                        <div class="timeline__item__inner">
+                                            <div class="timeline__content__wrap">
+                                                <div class="timeline__content">
+                                                    <h6>Dec, 2021</h6>
+                                                    <h4>Q1 2021 Public Token Sale Begins
+                                                    </h4>
+                                                    <p>Public Defipower launch and crowd-sale 
+                                                        Starts
+                                                         1st Quarter of 2021 &
+                                                        Token distribution will commence - 2nd March. .
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline__item timeline__item--top"
+                                        style="width: 312.25px; height: 163px;">
+                                        <div class="timeline__item__inner">
+                                            <div class="timeline__content__wrap">
+                                                <div class="timeline__content">
+                                                    <h6>Jan, 2021</h6>
+                                                    <h4>Q2 2021 Decentralized Exchange User Testing
+                                                    </h4>
+                                                    <p>Release of decentralized exchange platform for beta testing for
+                                                        BNB/Defipower community members .
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="timeline__item timeline__item--bottom"
+                                        style="width: 312.25px; height: 163px; transform: translateY(163px);">
+                                        <div class="timeline__item__inner">
+                                            <div class="timeline__content__wrap">
+                                                <div class="timeline__content">
+                                                    <h6>Mar, 2021</h6>
+                                                    <h4>Q1 2021 Public Token Sale Begins
+                                                    </h4>
+                                                    <p>Public Defipower launch and crowd-sale starts - 1st Quarter of 2021 &
+                                                        Token distribution will commence - 2nd March. .
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="timeline__item timeline__item--top"
+                                        style="width: 312.25px; height: 163px;">
+                                        <div class="timeline__item__inner">
+                                            <div class="timeline__content__wrap">
+                                                <div class="timeline__content">
+                                                    <h6>April, 2020</h6>
+                                                    <h4>Q3 & Q4 2020 Website and Whitepaper</h4>
+                                                    <p>MVP of wallet prototype released Pre-Sale of Defipower Starts Redesign
+                                                        of website goes live Version 2 of Whitepaper will be released
+                                                        Version 3 of Onepager will be released</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline__item timeline__item--bottom"
+                                        style="width: 312.25px; height: 163px; transform: translateY(163px);">
+                                        <div class="timeline__item__inner">
+                                            <div class="timeline__content__wrap">
+                                                <div class="timeline__content">
+                                                    <h6>25 Feb, 2021</h6>
+                                                    <h4>Q1 2021 Public Token Sale Begins</h4>
+                                                    <p>Public Defipower launch and crowd-sale starts - 1st Quarter of 2021 &
+                                                        Token distribution will commence - 2nd March.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline__item timeline__item--top"
+                                        style="width: 312.25px; height: 163px;">
+                                        <div class="timeline__item__inner">
+                                            <div class="timeline__content__wrap">
+                                                <div class="timeline__content">
+                                                    <h6>18 Aug, 2021</h6>
+                                                    <h4>Q2 2021 Decentralized Exchange User Testing
+                                                    </h4>
+                                                    <p>Release of decentralized exchange platform for beta testing for
+                                                        BNB/Defipower community members .
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline__item timeline__item--bottom"
+                                        style="width: 312.25px; height: 163px; transform: translateY(163px);">
+                                        <div class="timeline__item__inner">
+                                            <div class="timeline__content__wrap">
+                                                <div class="timeline__content">
+                                                    <h6>18 Dec, 2021</h6>
+                                                    <h4>Defipower</h4>
+                                                    <p>Comming soon</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="timeline-nav-button timeline-nav-button--prev"
+                                style="top: 182px;">Previous</button><button
+                                class="timeline-nav-button timeline-nav-button--next"
+                                style="top: 183px;">Next</button><span class="timeline-divider"
+                                style="top: 182px;"></span>
+                        </div>
                     </div>
-                </header>
-
-
-            </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
-                <div class="widget w--help bg-help">
-                    <h3 class="title">Read the  <span class="weight-bold">Whitepaper</span></h3>
-                    <p class="text">
-                    </p>
-                    <a href="./Whitepaper.pdf" class="btn btn--large btn--secondary btn--with-icon btn--icon-left">
-
-                        Download White paper
-                    </a>
                 </div>
+                <!-- partial -->
+
 
 
             </div>
         </div>
     </div>
-</section>
+</div>
 
+    
+    </div>
+    <style>
+        li.timeline-item h4 {
+            font-size: 19px;
+            color: #febc17 !important;
+        }
 
-<%- include('footer'); -%>
+        #style-4::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: #423d3d00;
+        }
+
+        #style-4::-webkit-scrollbar {
+            width: 10px;
+            background-color: #F5F5F5;
+            height: 5px;
+        }
+
+        #style-4::-webkit-scrollbar-thumb {
+            background-color: #423d3d00;
+            border: 1px solid #423d3d00;
+        }
+
+    </style>
+
+    <%- include('footer'); -%>
